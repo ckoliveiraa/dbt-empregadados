@@ -1,0 +1,82 @@
+version: 2
+
+models:
+  - name: agg_farmaciabr
+    description: "Tabela de vendas que contém informações sobre transações, incluindo detalhes do cliente, vendedor, produto e descontos aplicados."
+    columns:
+      - name: id_venda
+        description: "Identificador único da venda."
+        tests:
+          - unique
+          - not_null
+
+      - name: id_cliente
+        description: "Identificador do cliente que fez a compra."
+        tests:
+          - not_null
+
+      - name: id_vendedor
+        description: "Identificador do vendedor responsável pela venda."
+        tests:
+          - not_null
+
+      - name: id_unidade
+        description: "Identificador da unidade onde a venda ocorreu."
+        tests:
+          - not_null
+
+      - name: id_produto
+        description: "Identificador do produto vendido."
+        tests:
+          - not_null
+
+      - name: data_venda
+        description: "Data em que a venda ocorreu."
+        tests:
+          - not_null
+
+      - name: quantidade
+        description: "Quantidade de produtos vendidos."
+        tests:
+          - not_null
+
+      - name: cupom_desconto
+        description: "Código do cupom de desconto aplicado, se houver."
+        
+      - name: total_venda
+        description: "Valor total da venda após aplicação de descontos."
+        tests:
+          - not_null
+
+      - name: tipo_loja
+        description: "Tipo de loja onde a venda foi realizada."
+      
+      - name: tipo_pagamento
+        description: "Método de pagamento utilizado na transação."
+
+      - name: nome_produto
+        description: "Nome do produto vendido."
+      
+      - name: preco_produto
+        description: "Preço unitário do produto."
+      
+      - name: nome_vendedor
+        description: "Nome do vendedor responsável pela venda."
+      
+      - name: email_vendedor
+        description: "Email do vendedor responsável pela venda."
+      
+      - name: cidade
+        description: "Cidade da unidade onde a venda ocorreu."
+      
+      - name: nome_cliente
+        description: "Nome do cliente que fez a compra."
+      
+      - name: endereco_cliente
+        description: "Endereço do cliente."
+      
+      - name: telefone_cliente
+        description: "Telefone do cliente."
+      
+      - name: email_cliente
+        description: "Email do cliente."
